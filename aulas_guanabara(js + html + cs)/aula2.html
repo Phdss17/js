@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> prosseguindo </title>
+    <style>
+        body{
+            background-color: black;
+            color:  rgb(19, 93, 19);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1> calculadora Simples </h1>
+    <script>
+    function calcular(x, y){
+    if(Number.isNaN(x) || Number.isNaN(y)){
+        return "Erro: parâmetros inválidos";
+    }else{
+        return {
+            soma: (x + y),
+            sub: (x - y),
+            mult: (x * y),              
+            div: (x / y)}
+        }
+    }
+
+    x = Number(prompt("primeiro número"));  
+    y = Number(prompt("segundo número"));
+
+    resultado = calcular(x, y);
+
+    if(typeof resultado == "string"){
+        alert(resultado);
+    }else{
+        document.write(`Os resultados dos números ${x.toFixed(2).replace('.', ',')} e ${y.toFixed(2).replace('.', ',')} são: <br/>`);
+        document.write(`Soma: ${resultado.soma.toFixed(2).replace('.', ',')}} <br/>
+                          Sub: ${resultado.sub.toFixed(2).replace('.', ',')} <br/>
+                          Mult: ${resultado.mult.toFixed(2).replace('.', ',')} <br/>
+                          Div: ${resultado.div.toFixed(2).replace('.', ',')}<br/>`); 
+
+        document.write(`<br/>Resultado da soma em forma de real brasileiro: <br/>
+                        ${resultado.soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`);
+    }
+
+    </script>
+</body>
+</html>
