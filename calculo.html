@@ -1,0 +1,38 @@
+<!-- mesmo código só que em html para rodar no navegador -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Soma no Navegador</title>
+</head>
+<body>
+  <h1>Calculadora simples</h1>
+
+  <script>
+    function calcular(x, y){
+    if(Number.isNaN(x) || Number.isNaN(y)){
+        return "Erro: parâmetros inválidos";
+    }else{
+        return {
+            soma: (x + y),
+            sub: (x - y),
+            mult: (x * y),              
+            div: (x / y)}
+        }
+    }
+
+    for(let i = 1; i < 3; i++){
+        let x = Number(prompt("primeiro número"));
+        let y = Number(prompt("segundo número"));
+
+        let resultado = calcular(x, y);
+
+        if(typeof resultado == "string"){
+            alert(resultado);
+        }else{
+            alert("soma: " + resultado.soma + "\n sub: " + resultado.sub + "\n mult: " + resultado.mult + "\n div: " + resultado.div);    
+        }   
+    }
+  </script>
+</body>
+</html>
