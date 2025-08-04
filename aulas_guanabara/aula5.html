@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 5 </title>
+    <style>
+        body{
+            background-color: black;
+            color:  rgb(19, 93, 19);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        input{
+            background-color: rgb(84, 80, 80);
+            color: rgb(0, 0, 0);
+            width: 80px;
+        }
+        div#res{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora simples 2</h1>
+    <input type="number" name="n1" id="n1" > +
+    <input type="number" name="n2" id="n2" >
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res"></div>
+    <script>
+        function somar(){
+            let t1 = document.getElementById('n1');
+            let t2 = document.querySelector('input#n2');
+            let res = document.getElementById('res');
+
+            let val1 = Number(t1.value);
+            let val2 = Number(t2.value);
+            let s = val1 + val2;
+
+            res.innerHTML = `O resultado da soma é: <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>
