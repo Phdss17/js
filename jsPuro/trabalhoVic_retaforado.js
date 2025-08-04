@@ -5,8 +5,7 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-let movimentos = [];
-
+const movimentos = [];
 
 function adicionarMovimento(tipo, descricao, valor, categoria, data) {
     movimentos.push({
