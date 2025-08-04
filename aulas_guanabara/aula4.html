@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 4 </title>
+    <style>
+        body{
+            background-color: black;
+            color:  rgb(19, 93, 19);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        div#area{
+            background-color:rgb(17, 100, 17);
+            color: black;
+            width: 130px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Eventos da DIV </h1>
+    <div id = "area" > 
+        Clique!!
+    </div>
+    
+    <script>
+        let area = document.getElementById('area');
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseout', sair);
+
+        function clicar(){
+            area.innerText = "Clicou!!"
+            area.style.background = 'darkred';
+        }
+
+        function entrar(){
+            area.innerText =`CLIQUE!!!`;
+            area.style.background = 'darkgreen';;
+        }
+
+        function sair(){
+            area.innerText = "Clique!!";
+            area.style.background = 'darkgreen';;
+        }
+    </script>
+</body>
+</html>
