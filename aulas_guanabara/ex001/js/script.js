@@ -5,7 +5,6 @@ function carregar() {
     let data = new Date();
     let hora = data.getHours();
     let minutos = data.getMinutes();
-    hora = 13;
     msg.innerHTML = `Agora são ${hora}:${minutos}`;
     if(hora < 12 && hora >= 5){
         amanhecer(img, saud);
