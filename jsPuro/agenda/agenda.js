@@ -134,7 +134,7 @@ async function main() {
                 case "0":
                     break;
                 default:
-                    throw new Error("Opção fora de escopo!!\n");
+                    throw new Error("Opção fora de escopo!!\n")
             }
         }catch(error){
             console.error(error)
