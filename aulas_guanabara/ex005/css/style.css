@@ -21,6 +21,10 @@ select#selec{
     width: 150px;
 }
 
+input#button{
+    color: rgb(44, 29, 77);
+}
+
 footer{
     color: white;
     text-align: center;  
